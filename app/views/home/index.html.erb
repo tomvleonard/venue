@@ -1,0 +1,19 @@
+<div class='container'>
+  <h2>Calendar of Upcoming Events</h2>
+  <table class='table table-striped table-bordered table-collapse'>
+    <thead>
+      <th>Performer</th>
+      <th>When</th>
+      <th>Details</th>
+    </thead>
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.performer %></td>
+          <td><%= event.when %></td>
+          <td><%= event.content %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
