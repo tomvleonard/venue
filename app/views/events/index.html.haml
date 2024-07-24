@@ -1,0 +1,25 @@
+%h2 Events
+
+%h3 Future
+%table.table.table-striped.table-bordered.future
+  %thead
+    %tr
+      %th When
+      %th Performer
+      %th Content
+      %th
+  %tbody
+    - @future_events.each do |event|
+      = render partial: 'row', locals: { event: event }
+
+%h3 Past
+%table.table.table-striped.table-bordered.past
+  %thead
+    %tr
+      %th When
+      %th Performer
+      %th Content
+      %th
+  %tbody
+    - @past_events.each do |event|
+      = render partial: 'row', locals: { event: event }

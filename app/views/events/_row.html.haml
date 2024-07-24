@@ -1,0 +1,7 @@
+%tr
+  %td= event.when.in_time_zone('Eastern Time (US & Canada)').strftime('%m/%d/%Y %I:%M %p')
+  %td= event.performer
+  %td= event.content
+  %td
+    = link_to 'Delete', event_path(event), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' }
+    //TODO: add edit link after edit UI is completed
