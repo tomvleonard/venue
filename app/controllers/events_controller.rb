@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     else
       # Redirect back to the edit form with error messages
       flash[:alert] = 'There were errors updating the event. Please check the form below.'
-      redirect_to edit_event_path(@event) # Ensure this redirects to the correct edit path
+      redirect_to edit_event_path(@event) 
     end
   end
 

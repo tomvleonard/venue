@@ -13,13 +13,13 @@ RSpec.describe 'Landing Page', :system do
 
   describe 'Calendar Of Events', type: :system do
     before do
-      driven_by(:rack_test) # or use :selenium for browser testing
+      driven_by(:rack_test) 
       @future_event = FactoryBot.create(:event, event_date: 1.day.from_now)
       @past_event = FactoryBot.create(:event, event_date: 1.day.ago)
     end
 
     it 'displays expected future event information' do
-      visit root_path # Adjust if the events are displayed on a different path
+      visit root_path 
       
       within 'table tbody tr' do
         expect(page).to have_content(@future_event.event_date.in_time_zone('Eastern Time (US & Canada)').strftime('%m/%d/%Y %I:%M %p'))
