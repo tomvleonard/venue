@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.where('event_date > ?', Time.now)
   end
 end
+
+
+

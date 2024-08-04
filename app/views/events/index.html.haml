@@ -4,10 +4,10 @@
 %table.table.table-striped.table-bordered.future
   %thead
     %tr
-      %th When
+      %th Event Date
       %th Performer
       %th Content
-      %th
+      %th Actions
   %tbody
     - @future_events.each do |event|
       = render partial: 'row', locals: { event: event }
@@ -16,10 +16,10 @@
 %table.table.table-striped.table-bordered.past
   %thead
     %tr
-      %th When
+      %th Event Date
       %th Performer
       %th Content
-      %th
+      %th Actions
   %tbody
     - @past_events.each do |event|
       = render partial: 'row', locals: { event: event }

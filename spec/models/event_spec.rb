@@ -5,7 +5,7 @@ RSpec.describe Event, type: :model do
     before do
       @event = FactoryBot.build :event
     end
-
+    
     it 'is valid when all attributes are present' do
       expect(@event.valid?).to eq true
     end
@@ -42,9 +42,9 @@ RSpec.describe Event, type: :model do
       end
     end
 
-    context 'given that the when attribute is missing' do
+    context 'given that the event_date attribute is missing' do
       before do
-        @event.when = nil
+        @event.event_date = nil
       end
 
       it 'is invalid' do
@@ -54,7 +54,7 @@ RSpec.describe Event, type: :model do
       it 'has expected error message' do
         expected = [ "can't be blank" ]
         @event.valid?
-        expect(@event.errors[:when].to_a).to eq expected
+        expect(@event.errors[:event_date].to_a).to eq expected
       end
     end
   end
