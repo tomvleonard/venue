@@ -13,4 +13,8 @@
       %h1.text-center Venue
       - if flash[:notice].present?
         .alert.alert-primary= flash[:notice]
+      - if flash[:alert].present?
+        .alert.alert-danger= flash[:alert]
       .row= yield
+
+

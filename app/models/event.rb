@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
- [ :performer, :content, :when ].each do |attr|
+ [ :performer, :content, :event_date ].each do |attr|
     validates attr, presence: true
   end
 end
